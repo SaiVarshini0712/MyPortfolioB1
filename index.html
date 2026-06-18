@@ -57,7 +57,7 @@
     text-decoration: none;
   }
   .nav-logo span { color: var(--accent2); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
     font-size: 0.82rem;
     font-weight: 500;
@@ -232,6 +232,7 @@
   }
   .section-line { flex: 1; height: 1px; background: var(--border); margin-bottom: 0.4rem; }
 
+  /* ABOUT */
   #about { background: var(--warm); }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -253,6 +254,7 @@
   .about-extra-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.2rem; }
   .about-extra-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
+  /* SKILLS */
   .skills-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;
   }
@@ -279,6 +281,7 @@
     border-radius: 100px; color: var(--muted);
   }
 
+  /* PROJECTS */
   #projects { background: var(--ink); color: var(--cream); }
   #projects h2 { color: var(--cream); }
   #projects .section-num { color: var(--gold); }
@@ -290,7 +293,6 @@
     background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
     border-radius: 10px; padding: 2rem;
     transition: background 0.3s, transform 0.25s;
-    position: relative;
   }
   .project-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-3px); }
   .project-lang {
@@ -311,8 +313,9 @@
   }
   .project-link:hover { gap: 0.7rem; }
 
+  /* CERTIFICATIONS */
   .certs-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;
   }
   .cert-card {
     border: 1px solid var(--border); border-radius: 10px;
@@ -326,12 +329,18 @@
   }
   .cert-header.blue { background: linear-gradient(135deg, #1a3a5c, #2c5f8a); color: white; }
   .cert-header.red  { background: linear-gradient(135deg, #7a1a1a, #c0392b); color: white; }
+  .cert-header.green{ background: linear-gradient(135deg, #14532d, #16a34a); color: white; }
+  .cert-header.orange{ background: linear-gradient(135deg, #7c2d12, #ea580c); color: white; }
+  .cert-header.purple{ background: linear-gradient(135deg, #3b0764, #7c3aed); color: white; }
+  .cert-header.teal  { background: linear-gradient(135deg, #134e4a, #0d9488); color: white; }
+  .cert-header.navy  { background: linear-gradient(135deg, #0f172a, #1e40af); color: white; }
+  .cert-header.slate { background: linear-gradient(135deg, #1e293b, #475569); color: white; }
   .cert-issuer { font-size: 0.72rem; opacity: 0.75; font-family: 'DM Mono', monospace; letter-spacing: 0.08em; }
-  .cert-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-top: 0.3rem; }
+  .cert-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-top: 0.3rem; line-height: 1.3; }
   .cert-badge {
     background: rgba(255,255,255,0.15); padding: 0.3rem 0.7rem;
     border-radius: 100px; font-size: 0.68rem;
-    font-family: 'DM Mono', monospace; white-space: nowrap;
+    font-family: 'DM Mono', monospace; white-space: nowrap; flex-shrink: 0;
   }
   .cert-body { padding: 1.5rem 1.8rem; }
   .cert-row {
@@ -341,9 +350,59 @@
   }
   .cert-row:last-child { border-bottom: none; }
   .cert-row-label { color: var(--muted); }
-  .cert-row-value { font-weight: 600; font-family: 'DM Mono', monospace; }
+  .cert-row-value { font-weight: 600; font-family: 'DM Mono', monospace; font-size: 0.78rem; text-align: right; }
+  .cert-row-value a { color: var(--accent2); text-decoration: none; }
+  .cert-row-value a:hover { text-decoration: underline; }
 
-  #education { background: var(--warm); }
+  /* INTERNSHIPS */
+  #internships { background: var(--warm); }
+  .internships-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;
+  }
+  .intern-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .intern-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+  .intern-header {
+    padding: 1.8rem 2rem;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;
+  }
+  .intern-header.thiranex { background: linear-gradient(135deg, #0f2d5a, #2c5f8a); color: white; }
+  .intern-header.vault    { background: linear-gradient(135deg, #1a0a00, #c2410c); color: white; }
+  .intern-org {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    opacity: 0.75; letter-spacing: 0.08em; margin-bottom: 0.4rem;
+  }
+  .intern-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700; line-height: 1.25;
+  }
+  .intern-status {
+    background: rgba(255,255,255,0.15); color: white;
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    padding: 0.3rem 0.75rem; border-radius: 100px;
+    white-space: nowrap; flex-shrink: 0;
+    align-self: flex-start; margin-top: 0.2rem;
+  }
+  .intern-body { padding: 1.6rem 2rem; }
+  .intern-row {
+    display: flex; justify-content: space-between; gap: 1rem;
+    font-size: 0.82rem; padding: 0.45rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .intern-row:last-child { border-bottom: none; }
+  .intern-row-label { color: var(--muted); white-space: nowrap; }
+  .intern-row-value { font-weight: 600; font-family: 'DM Mono', monospace; font-size: 0.78rem; text-align: right; }
+  .intern-desc {
+    margin-top: 1.2rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.84rem; color: var(--muted); line-height: 1.7;
+  }
+
+  /* EDUCATION */
+  #education { background: var(--cream); }
   .edu-timeline { position: relative; padding-left: 2rem; }
   .edu-timeline::before {
     content: ''; position: absolute;
@@ -374,6 +433,7 @@
     font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--ink);
   }
 
+  /* CONTACT */
   #contact { background: var(--ink); color: var(--cream); text-align: center; }
   #contact h2 { color: var(--cream); }
   #contact .section-num { color: var(--gold); }
@@ -392,10 +452,10 @@
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .contact-link:hover { transform: translateY(-3px); }
-  .cl-email   { background: var(--accent2); color: white; }
-  .cl-linkedin{ background: #0a66c2; color: white; }
-  .cl-github  { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
-  .cl-phone   { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
+  .cl-email    { background: var(--accent2); color: white; }
+  .cl-linkedin { background: #0a66c2; color: white; }
+  .cl-github   { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
+  .cl-phone    { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.15); }
 
   footer {
     background: #0a0908; color: rgba(255,255,255,0.3);
@@ -403,6 +463,7 @@
     font-size: 0.75rem; font-family: 'DM Mono', monospace; letter-spacing: 0.05em;
   }
 
+  /* REVEAL ANIMATION */
   .reveal {
     opacity: 0; transform: translateY(28px);
     transition: opacity 0.7s ease, transform 0.7s ease;
@@ -411,16 +472,24 @@
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
+    .nav-links { gap: 1.2rem; }
+    .nav-links a { font-size: 0.72rem; }
     #hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 2rem; }
     .hero-visual { display: none; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .internships-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .certs-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">SV<span>.</span></a>
   <ul class="nav-links">
@@ -428,21 +497,23 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Certs</a></li>
+    <li><a href="#internships">Internships</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-text reveal">
-    <div class="hero-eyebrow">Computer Science & Engineering</div>
+    <div class="hero-eyebrow">Computer Science &amp; Engineering</div>
     <h1>
       Sai Varshini
       <span class="last">Marisarla.</span>
     </h1>
     <p class="hero-sub">
-      Engineering student bridging advanced technology and strategic business solutions — building web interfaces, AI/ML systems, and data-driven applications.
+      Engineering student bridging advanced technology and strategic business solutions —
+      building web interfaces, AI/ML systems, and data-driven applications.
     </p>
     <div class="hero-tags">
       <span class="tag">Web Development</span>
@@ -450,19 +521,22 @@
       <span class="tag">Business Analysis</span>
       <span class="tag">Full Stack</span>
       <span class="tag">Deep Learning</span>
+      <span class="tag">Cloud &amp; Platforms</span>
     </div>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View My Work →</a>
       <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
+
   <div class="hero-visual reveal">
     <div class="hero-card">
       <div class="hc-label">// Quick Stats</div>
       <div class="hc-stat"><span class="hc-stat-label">Current CGPA</span><span class="hc-stat-value">7.61</span></div>
       <div class="hc-stat"><span class="hc-stat-label">GitHub Repos</span><span class="hc-stat-value">5 Public</span></div>
       <div class="hc-stat"><span class="hc-stat-label">Intermediate</span><span class="hc-stat-value">84.9%</span></div>
-      <div class="hc-stat"><span class="hc-stat-label">Focus Areas</span><span class="hc-stat-value">3 Domains</span></div>
+      <div class="hc-stat"><span class="hc-stat-label">Certifications</span><span class="hc-stat-value">8 Earned</span></div>
+      <div class="hc-stat"><span class="hc-stat-label">Internships</span><span class="hc-stat-value">2 Offers</span></div>
       <div class="hc-cert">
         <div class="hc-cert-title">🏆 NPTEL Elite Certificate</div>
         <div class="hc-cert-sub">Deep Learning — IIT Kharagpur</div>
@@ -472,7 +546,7 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ══ ABOUT ══ -->
 <section id="about">
   <div class="section-header reveal">
     <span class="section-num">01</span>
@@ -503,7 +577,7 @@
       <div class="about-extra-card">
         <div class="about-extra-icon">⚡</div>
         <div>
-          <div class="about-extra-title">Fast & Eager Learner</div>
+          <div class="about-extra-title">Fast &amp; Eager Learner</div>
           <div class="about-extra-desc">I learn from the ground up and quickly pick up new frameworks, tools, or concepts. NPTEL Elite in Deep Learning proves exactly that.</div>
         </div>
       </div>
@@ -511,7 +585,7 @@
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ══ SKILLS ══ -->
 <section id="skills">
   <div class="section-header reveal">
     <span class="section-num">02</span>
@@ -530,19 +604,28 @@
     </div>
     <div class="skill-card reveal">
       <div class="skill-card-icon">🤖</div>
-      <div class="skill-card-title">AI & Machine Learning</div>
+      <div class="skill-card-title">AI &amp; Machine Learning</div>
       <div class="skill-card-items">
         <span class="skill-item">Deep Learning</span><span class="skill-item">Data Preprocessing</span>
-        <span class="skill-item">Predictive Modeling</span><span class="skill-item">Core AI/ML</span>
+        <span class="skill-item">Predictive Modeling</span><span class="skill-item">Prompt Engineering</span>
+        <span class="skill-item">Core AI/ML</span>
       </div>
     </div>
     <div class="skill-card reveal">
       <div class="skill-card-icon">🗄️</div>
-      <div class="skill-card-title">Backend & Database</div>
+      <div class="skill-card-title">Backend &amp; Database</div>
       <div class="skill-card-items">
         <span class="skill-item">Node.js</span><span class="skill-item">Express.js</span>
         <span class="skill-item">JWT Auth</span><span class="skill-item">Socket.IO</span>
         <span class="skill-item">MySQL</span><span class="skill-item">MongoDB</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-card-icon">☁️</div>
+      <div class="skill-card-title">Cloud &amp; Platforms</div>
+      <div class="skill-card-items">
+        <span class="skill-item">AWS ML</span><span class="skill-item">ServiceNow</span>
+        <span class="skill-item">ITSM</span><span class="skill-item">Cloud Basics</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -565,7 +648,7 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ══ PROJECTS ══ -->
 <section id="projects">
   <div class="section-header reveal">
     <span class="section-num">03</span>
@@ -588,7 +671,7 @@
     <div class="project-card reveal">
       <div class="project-lang">JavaScript</div>
       <div class="project-title">AI E-Commerce Platform</div>
-      <div class="project-desc">AI-powered e-commerce platform with intelligent product recommendations and dynamic user experiences.</div>
+      <div class="project-desc">AI-powered e-commerce platform with intelligent product recommendations and dynamic user experiences using the Anthropic API.</div>
       <a href="https://github.com/SaiVarshini0712/myai_ecommerce_platform" target="_blank" class="project-link">View on GitHub →</a>
     </div>
     <div class="project-card reveal">
@@ -606,7 +689,7 @@
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- ══ CERTIFICATIONS ══ -->
 <section id="certifications">
   <div class="section-header reveal">
     <span class="section-num">04</span>
@@ -614,6 +697,8 @@
     <div class="section-line"></div>
   </div>
   <div class="certs-grid">
+
+    <!-- NPTEL Deep Learning -->
     <div class="cert-card reveal">
       <div class="cert-header blue">
         <div>
@@ -629,33 +714,193 @@
         <div class="cert-row"><span class="cert-row-label">Proctored Exam</span><span class="cert-row-value">36 / 75</span></div>
         <div class="cert-row"><span class="cert-row-label">Score</span><span class="cert-row-value">60% Consolidated</span></div>
         <div class="cert-row"><span class="cert-row-label">Credits</span><span class="cert-row-value">4 Recommended</span></div>
-        <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.65rem">NPTEL26EE53S1051301439</span></div>
+        <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.62rem">NPTEL26EE53S1051301439</span></div>
       </div>
     </div>
+
+    <!-- NPTEL Software Engineering -->
+    <div class="cert-card reveal">
+      <div class="cert-header navy">
+        <div>
+          <div class="cert-issuer">NPTEL · IIT Kharagpur · SWAYAM</div>
+          <div class="cert-name">Software Engineering</div>
+        </div>
+        <div class="cert-badge">✅ Certified</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-row"><span class="cert-row-label">Period</span><span class="cert-row-value">Jul – Oct 2025</span></div>
+        <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">12 Weeks</span></div>
+        <div class="cert-row"><span class="cert-row-label">Assignments</span><span class="cert-row-value">19.88 / 25</span></div>
+        <div class="cert-row"><span class="cert-row-label">Proctored Exam</span><span class="cert-row-value">30 / 75</span></div>
+        <div class="cert-row"><span class="cert-row-label">Score</span><span class="cert-row-value">50% Consolidated</span></div>
+        <div class="cert-row"><span class="cert-row-label">Credits</span><span class="cert-row-value">3–4 Recommended</span></div>
+        <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.62rem">NPTEL25CS108S572402978</span></div>
+      </div>
+    </div>
+
+    <!-- AWS ML Foundations -->
+    <div class="cert-card reveal">
+      <div class="cert-header orange">
+        <div>
+          <div class="cert-issuer">Amazon Web Services · AWS Academy</div>
+          <div class="cert-name">Machine Learning Foundations</div>
+        </div>
+        <div class="cert-badge">🎓 Trained</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">June 8, 2026</span></div>
+        <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">20 Hours</span></div>
+        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Training Badge</span></div>
+        <div class="cert-row"><span class="cert-row-label">Verify</span><span class="cert-row-value"><a href="https://www.credly.com/go/ch1EBm1o" target="_blank">Credly →</a></span></div>
+      </div>
+    </div>
+
+    <!-- ServiceNow Welcome -->
+    <div class="cert-card reveal">
+      <div class="cert-header teal">
+        <div>
+          <div class="cert-issuer">ServiceNow · Now Learning</div>
+          <div class="cert-name">Welcome to ServiceNow</div>
+        </div>
+        <div class="cert-badge">📜 Micro-Cert</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">June 13, 2026</span></div>
+        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Micro-Certification</span></div>
+        <div class="cert-row"><span class="cert-row-label">Authority</span><span class="cert-row-value">Jayney Howson, SVP</span></div>
+        <div class="cert-row"><span class="cert-row-label">Platform</span><span class="cert-row-value">ServiceNow Learning</span></div>
+      </div>
+    </div>
+
+    <!-- ServiceNow Admin Fundamentals -->
+    <div class="cert-card reveal">
+      <div class="cert-header slate">
+        <div>
+          <div class="cert-issuer">ServiceNow · Now Learning</div>
+          <div class="cert-name">Administration Fundamentals</div>
+        </div>
+        <div class="cert-badge">🛡️ Course Badge</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">On-Demand Equivalency</span></div>
+        <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">ServiceNow Admin</span></div>
+        <div class="cert-row"><span class="cert-row-label">Platform</span><span class="cert-row-value">ServiceNow Learning</span></div>
+        <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
+      </div>
+    </div>
+
+    <!-- Full Stack Developer -->
     <div class="cert-card reveal">
       <div class="cert-header red">
         <div>
-          <div class="cert-issuer">Thiranex · Skill Dev & Future Tech</div>
+          <div class="cert-issuer">Thiranex · Skill Dev &amp; Future Tech</div>
           <div class="cert-name">Full Stack Developer</div>
         </div>
         <div class="cert-badge">✅ Certified</div>
       </div>
       <div class="cert-body">
         <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">19 May 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Free Full Stack Course</span></div>
-        <div class="cert-row"><span class="cert-row-label">Name</span><span class="cert-row-value">M Sai Varshini</span></div>
         <div class="cert-row"><span class="cert-row-label">Code</span><span class="cert-row-value">10243040</span></div>
         <div class="cert-row"><span class="cert-row-label">Skills</span><span class="cert-row-value">HTML · CSS · JS · Backend · DB</span></div>
         <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
       </div>
     </div>
+
+    <!-- Claude 3.5 for Beginners -->
+    <div class="cert-card reveal">
+      <div class="cert-header purple">
+        <div>
+          <div class="cert-issuer">Thiranex · Skill Dev &amp; Future Tech</div>
+          <div class="cert-name">Claude 3.5 for Beginners</div>
+        </div>
+        <div class="cert-badge">✅ Certified</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">3 May 2026</span></div>
+        <div class="cert-row"><span class="cert-row-label">Code</span><span class="cert-row-value">10181844</span></div>
+        <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">Generative AI · Claude API</span></div>
+        <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
+      </div>
+    </div>
+
+    <!-- Cisco HTML Essentials -->
+    <div class="cert-card reveal">
+      <div class="cert-header green">
+        <div>
+          <div class="cert-issuer">Cisco Networking Academy · MVGR</div>
+          <div class="cert-name">HTML Essentials</div>
+        </div>
+        <div class="cert-badge">✅ Certified</div>
+      </div>
+      <div class="cert-body">
+        <div class="cert-row"><span class="cert-row-label">Completed</span><span class="cert-row-value">27 Jan 2026</span></div>
+        <div class="cert-row"><span class="cert-row-label">Instructor</span><span class="cert-row-value">Sobha Rani K</span></div>
+        <div class="cert-row"><span class="cert-row-label">Issued by</span><span class="cert-row-value">MVGR + Cisco NetAcad</span></div>
+        <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">HTML &amp; Web Basics</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
+<!-- ══ INTERNSHIPS ══ -->
+<section id="internships">
   <div class="section-header reveal">
     <span class="section-num">05</span>
+    <h2>Internships</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="internships-grid">
+
+    <!-- Thiranex -->
+    <div class="intern-card reveal">
+      <div class="intern-header thiranex">
+        <div>
+          <div class="intern-org">Thiranex · Skill Development &amp; Future Tech</div>
+          <div class="intern-role">Full Stack Development Intern</div>
+        </div>
+        <div class="intern-status">✅ Completed</div>
+      </div>
+      <div class="intern-body">
+        <div class="intern-row"><span class="intern-row-label">Intern ID</span><span class="intern-row-value">THX-MAY2226-672</span></div>
+        <div class="intern-row"><span class="intern-row-label">Start Date</span><span class="intern-row-value">22 May 2026</span></div>
+        <div class="intern-row"><span class="intern-row-label">End Date</span><span class="intern-row-value">21 Jun 2026</span></div>
+        <div class="intern-row"><span class="intern-row-label">Work Mode</span><span class="intern-row-value">Remote / Project-Based</span></div>
+        <div class="intern-row"><span class="intern-row-label">Duration</span><span class="intern-row-value">1 Month</span></div>
+        <div class="intern-desc">
+          Worked on practical full-stack projects under industry mentorship at Thiranex — building real-world web applications across the complete stack, from UI design to database integration.
+        </div>
+      </div>
+    </div>
+
+    <!-- VaultofCodes -->
+    <div class="intern-card reveal">
+      <div class="intern-header vault">
+        <div>
+          <div class="intern-org">VaultofCodes</div>
+          <div class="intern-role">AI &amp; Prompt Engineering Intern</div>
+        </div>
+        <div class="intern-status">🔄 Upcoming</div>
+      </div>
+      <div class="intern-body">
+        <div class="intern-row"><span class="intern-row-label">Start Date</span><span class="intern-row-value">25 Jun 2026</span></div>
+        <div class="intern-row"><span class="intern-row-label">Duration</span><span class="intern-row-value">1 Month</span></div>
+        <div class="intern-row"><span class="intern-row-label">Work Mode</span><span class="intern-row-value">Online / Remote</span></div>
+        <div class="intern-row"><span class="intern-row-label">Domain</span><span class="intern-row-value">AI &amp; Prompt Engineering</span></div>
+        <div class="intern-row"><span class="intern-row-label">Outcome</span><span class="intern-row-value">Certificate + Recommendation</span></div>
+        <div class="intern-desc">
+          Selected for hands-on AI &amp; Prompt Engineering internship at VaultofCodes, working on real-world AI projects with practical knowledge in designing and optimising prompts for large language models.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══ -->
+<section id="education">
+  <div class="section-header reveal">
+    <span class="section-num">06</span>
     <h2>Education</h2>
     <div class="section-line"></div>
   </div>
@@ -663,7 +908,7 @@
     <div class="edu-item reveal">
       <div class="edu-period">2023 – 2027 (Ongoing)</div>
       <div class="edu-school">Maharaj Vijayaram Gajapathi Raj College of Engineering</div>
-      <div class="edu-degree">B.Tech · Computer Science & Engineering</div>
+      <div class="edu-degree">B.Tech · Computer Science &amp; Engineering</div>
       <span class="edu-grade">CGPA: 7.61</span>
     </div>
     <div class="edu-item reveal">
@@ -681,10 +926,10 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ══ CONTACT ══ -->
 <section id="contact">
   <div class="section-header reveal" style="justify-content:center;text-align:center;flex-direction:column;gap:0.5rem;">
-    <span class="section-num">06</span>
+    <span class="section-num">07</span>
     <h2>Let's Connect</h2>
   </div>
   <div class="contact-inner reveal">
@@ -698,7 +943,7 @@
   </div>
 </section>
 
-<footer>© 2026 Sai Varshini Marisarla · Built with HTML, CSS & JS · Hosted on Vercel / Netlify</footer>
+<footer>© 2026 Sai Varshini Marisarla · Built with HTML, CSS &amp; JS · Hosted on GitHub Pages</footer>
 
 <script>
   const observer = new IntersectionObserver((entries) => {
