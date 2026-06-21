@@ -314,6 +314,16 @@
   .project-link:hover { gap: 0.7rem; }
 
   /* CERTIFICATIONS */
+  .cert-group { margin-bottom: 3rem; }
+  .cert-group:last-of-type { margin-bottom: 0; }
+  .cert-group-label {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    color: var(--accent2); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem;
+  }
+  .cert-group-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
   .certs-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;
   }
@@ -535,7 +545,7 @@
       <div class="hc-stat"><span class="hc-stat-label">Current CGPA</span><span class="hc-stat-value">7.61</span></div>
       <div class="hc-stat"><span class="hc-stat-label">GitHub Repos</span><span class="hc-stat-value">5 Public</span></div>
       <div class="hc-stat"><span class="hc-stat-label">Intermediate</span><span class="hc-stat-value">84.9%</span></div>
-      <div class="hc-stat"><span class="hc-stat-label">Certifications</span><span class="hc-stat-value">8 Earned</span></div>
+      <div class="hc-stat"><span class="hc-stat-label">Certifications</span><span class="hc-stat-value">9 Earned</span></div>
       <div class="hc-stat"><span class="hc-stat-label">Internships</span><span class="hc-stat-value">2 Offers</span></div>
       <div class="hc-cert">
         <div class="hc-cert-title">🏆 NPTEL Elite Certificate</div>
@@ -663,10 +673,10 @@
       <a href="https://github.com/SaiVarshini0712/TaskFlowPro_B1" target="_blank" class="project-link">View on GitHub →</a>
     </div>
     <div class="project-card reveal">
-      <div class="project-lang">JavaScript</div>
-      <div class="project-title">Inkwell</div>
-      <div class="project-desc">Modern blogging platform — register, write posts, nested comments, and likes. JWT auth, RESTful API, polished React frontend.</div>
-      <a href="https://github.com/SaiVarshini0712/Inkwell" target="_blank" class="project-link">View on GitHub →</a>
+      <div class="project-lang">HTML</div>
+      <div class="project-title">Kochi Trip Plan</div>
+      <div class="project-desc">A travel itinerary and trip-planning project mapping out a Kochi getaway — organizing destinations, schedules, and logistics into a clean, shareable plan.</div>
+      <a href="https://github.com/SaiVarshini0712/Kochi-Trip-Plan" target="_blank" class="project-link">View on GitHub →</a>
     </div>
     <div class="project-card reveal">
       <div class="project-lang">JavaScript</div>
@@ -696,151 +706,190 @@
     <h2>Certifications</h2>
     <div class="section-line"></div>
   </div>
-  <div class="certs-grid">
 
-    <!-- NPTEL Deep Learning -->
-    <div class="cert-card reveal">
-      <div class="cert-header blue">
-        <div>
-          <div class="cert-issuer">NPTEL · IIT Kharagpur · SWAYAM</div>
-          <div class="cert-name">Deep Learning</div>
+  <!-- Group: Academic / NPTEL -->
+  <div class="cert-group reveal">
+    <div class="cert-group-label">Academic — NPTEL · IIT Kharagpur</div>
+    <div class="certs-grid">
+
+      <!-- NPTEL Deep Learning -->
+      <div class="cert-card reveal">
+        <div class="cert-header blue">
+          <div>
+            <div class="cert-issuer">NPTEL · IIT Kharagpur · SWAYAM</div>
+            <div class="cert-name">Deep Learning</div>
+          </div>
+          <div class="cert-badge">⭐ Elite</div>
         </div>
-        <div class="cert-badge">⭐ Elite</div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Period</span><span class="cert-row-value">Jan – Apr 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">12 Weeks</span></div>
-        <div class="cert-row"><span class="cert-row-label">Assignments</span><span class="cert-row-value">23.75 / 25</span></div>
-        <div class="cert-row"><span class="cert-row-label">Proctored Exam</span><span class="cert-row-value">36 / 75</span></div>
-        <div class="cert-row"><span class="cert-row-label">Score</span><span class="cert-row-value">60% Consolidated</span></div>
-        <div class="cert-row"><span class="cert-row-label">Credits</span><span class="cert-row-value">4 Recommended</span></div>
-        <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.62rem">NPTEL26EE53S1051301439</span></div>
-      </div>
-    </div>
-
-    <!-- NPTEL Software Engineering -->
-    <div class="cert-card reveal">
-      <div class="cert-header navy">
-        <div>
-          <div class="cert-issuer">NPTEL · IIT Kharagpur · SWAYAM</div>
-          <div class="cert-name">Software Engineering</div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Period</span><span class="cert-row-value">Jan – Apr 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">12 Weeks</span></div>
+          <div class="cert-row"><span class="cert-row-label">Assignments</span><span class="cert-row-value">23.75 / 25</span></div>
+          <div class="cert-row"><span class="cert-row-label">Proctored Exam</span><span class="cert-row-value">36 / 75</span></div>
+          <div class="cert-row"><span class="cert-row-label">Score</span><span class="cert-row-value">60% Consolidated</span></div>
+          <div class="cert-row"><span class="cert-row-label">Credits</span><span class="cert-row-value">4 Recommended</span></div>
+          <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.62rem">NPTEL26EE53S1051301439</span></div>
         </div>
-        <div class="cert-badge">✅ Certified</div>
       </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Period</span><span class="cert-row-value">Jul – Oct 2025</span></div>
-        <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">12 Weeks</span></div>
-        <div class="cert-row"><span class="cert-row-label">Assignments</span><span class="cert-row-value">19.88 / 25</span></div>
-        <div class="cert-row"><span class="cert-row-label">Proctored Exam</span><span class="cert-row-value">30 / 75</span></div>
-        <div class="cert-row"><span class="cert-row-label">Score</span><span class="cert-row-value">50% Consolidated</span></div>
-        <div class="cert-row"><span class="cert-row-label">Credits</span><span class="cert-row-value">3–4 Recommended</span></div>
-        <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.62rem">NPTEL25CS108S572402978</span></div>
-      </div>
-    </div>
 
-    <!-- AWS ML Foundations -->
-    <div class="cert-card reveal">
-      <div class="cert-header orange">
-        <div>
-          <div class="cert-issuer">Amazon Web Services · AWS Academy</div>
-          <div class="cert-name">Machine Learning Foundations</div>
+      <!-- NPTEL Software Engineering -->
+      <div class="cert-card reveal">
+        <div class="cert-header navy">
+          <div>
+            <div class="cert-issuer">NPTEL · IIT Kharagpur · SWAYAM</div>
+            <div class="cert-name">Software Engineering</div>
+          </div>
+          <div class="cert-badge">✅ Certified</div>
         </div>
-        <div class="cert-badge">🎓 Trained</div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">June 8, 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">20 Hours</span></div>
-        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Training Badge</span></div>
-        <div class="cert-row"><span class="cert-row-label">Verify</span><span class="cert-row-value"><a href="https://www.credly.com/go/ch1EBm1o" target="_blank">Credly →</a></span></div>
-      </div>
-    </div>
-
-    <!-- ServiceNow Welcome -->
-    <div class="cert-card reveal">
-      <div class="cert-header teal">
-        <div>
-          <div class="cert-issuer">ServiceNow · Now Learning</div>
-          <div class="cert-name">Welcome to ServiceNow</div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Period</span><span class="cert-row-value">Jul – Oct 2025</span></div>
+          <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">12 Weeks</span></div>
+          <div class="cert-row"><span class="cert-row-label">Assignments</span><span class="cert-row-value">19.88 / 25</span></div>
+          <div class="cert-row"><span class="cert-row-label">Proctored Exam</span><span class="cert-row-value">30 / 75</span></div>
+          <div class="cert-row"><span class="cert-row-label">Score</span><span class="cert-row-value">50% Consolidated</span></div>
+          <div class="cert-row"><span class="cert-row-label">Credits</span><span class="cert-row-value">3–4 Recommended</span></div>
+          <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value" style="font-size:0.62rem">NPTEL25CS108S572402978</span></div>
         </div>
-        <div class="cert-badge">📜 Micro-Cert</div>
       </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">June 13, 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Micro-Certification</span></div>
-        <div class="cert-row"><span class="cert-row-label">Authority</span><span class="cert-row-value">Jayney Howson, SVP</span></div>
-        <div class="cert-row"><span class="cert-row-label">Platform</span><span class="cert-row-value">ServiceNow Learning</span></div>
-      </div>
-    </div>
 
-    <!-- ServiceNow Admin Fundamentals -->
-    <div class="cert-card reveal">
-      <div class="cert-header slate">
-        <div>
-          <div class="cert-issuer">ServiceNow · Now Learning</div>
-          <div class="cert-name">Administration Fundamentals</div>
-        </div>
-        <div class="cert-badge">🛡️ Course Badge</div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">On-Demand Equivalency</span></div>
-        <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">ServiceNow Admin</span></div>
-        <div class="cert-row"><span class="cert-row-label">Platform</span><span class="cert-row-value">ServiceNow Learning</span></div>
-        <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
-      </div>
     </div>
-
-    <!-- Full Stack Developer -->
-    <div class="cert-card reveal">
-      <div class="cert-header red">
-        <div>
-          <div class="cert-issuer">Thiranex · Skill Dev &amp; Future Tech</div>
-          <div class="cert-name">Full Stack Developer</div>
-        </div>
-        <div class="cert-badge">✅ Certified</div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">19 May 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Code</span><span class="cert-row-value">10243040</span></div>
-        <div class="cert-row"><span class="cert-row-label">Skills</span><span class="cert-row-value">HTML · CSS · JS · Backend · DB</span></div>
-        <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
-      </div>
-    </div>
-
-    <!-- Claude 3.5 for Beginners -->
-    <div class="cert-card reveal">
-      <div class="cert-header purple">
-        <div>
-          <div class="cert-issuer">Thiranex · Skill Dev &amp; Future Tech</div>
-          <div class="cert-name">Claude 3.5 for Beginners</div>
-        </div>
-        <div class="cert-badge">✅ Certified</div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">3 May 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Code</span><span class="cert-row-value">10181844</span></div>
-        <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">Generative AI · Claude API</span></div>
-        <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
-      </div>
-    </div>
-
-    <!-- Cisco HTML Essentials -->
-    <div class="cert-card reveal">
-      <div class="cert-header green">
-        <div>
-          <div class="cert-issuer">Cisco Networking Academy · MVGR</div>
-          <div class="cert-name">HTML Essentials</div>
-        </div>
-        <div class="cert-badge">✅ Certified</div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-row"><span class="cert-row-label">Completed</span><span class="cert-row-value">27 Jan 2026</span></div>
-        <div class="cert-row"><span class="cert-row-label">Instructor</span><span class="cert-row-value">Sobha Rani K</span></div>
-        <div class="cert-row"><span class="cert-row-label">Issued by</span><span class="cert-row-value">MVGR + Cisco NetAcad</span></div>
-        <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">HTML &amp; Web Basics</span></div>
-      </div>
-    </div>
-
   </div>
+
+  <!-- Group: Cloud & Platforms -->
+  <div class="cert-group reveal">
+    <div class="cert-group-label">Cloud &amp; Platforms</div>
+    <div class="certs-grid">
+
+      <!-- AWS ML Foundations -->
+      <div class="cert-card reveal">
+        <div class="cert-header orange">
+          <div>
+            <div class="cert-issuer">Amazon Web Services · AWS Academy</div>
+            <div class="cert-name">Machine Learning Foundations</div>
+          </div>
+          <div class="cert-badge">🎓 Trained</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">June 8, 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">20 Hours</span></div>
+          <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Training Badge</span></div>
+          <div class="cert-row"><span class="cert-row-label">Verify</span><span class="cert-row-value"><a href="https://www.credly.com/go/ch1EBm1o" target="_blank">Credly →</a></span></div>
+        </div>
+      </div>
+
+      <!-- ServiceNow Welcome -->
+      <div class="cert-card reveal">
+        <div class="cert-header teal">
+          <div>
+            <div class="cert-issuer">ServiceNow · Now Learning</div>
+            <div class="cert-name">Welcome to ServiceNow</div>
+          </div>
+          <div class="cert-badge">📜 Micro-Cert</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">June 13, 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">Micro-Certification</span></div>
+          <div class="cert-row"><span class="cert-row-label">Authority</span><span class="cert-row-value">Jayney Howson, SVP</span></div>
+          <div class="cert-row"><span class="cert-row-label">Platform</span><span class="cert-row-value">ServiceNow Learning</span></div>
+        </div>
+      </div>
+
+      <!-- ServiceNow Admin Fundamentals -->
+      <div class="cert-card reveal">
+        <div class="cert-header slate">
+          <div>
+            <div class="cert-issuer">ServiceNow · Now Learning</div>
+            <div class="cert-name">Administration Fundamentals</div>
+          </div>
+          <div class="cert-badge">🛡️ Course Badge</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Type</span><span class="cert-row-value">On-Demand Equivalency</span></div>
+          <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">ServiceNow Admin</span></div>
+          <div class="cert-row"><span class="cert-row-label">Platform</span><span class="cert-row-value">ServiceNow Learning</span></div>
+          <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Group: Web Dev & Thiranex Skill Courses -->
+  <div class="cert-group reveal">
+    <div class="cert-group-label">Web Development &amp; Skill Courses</div>
+    <div class="certs-grid">
+
+      <!-- Full Stack Developer -->
+      <div class="cert-card reveal">
+        <div class="cert-header red">
+          <div>
+            <div class="cert-issuer">Thiranex · Skill Dev &amp; Future Tech</div>
+            <div class="cert-name">Full Stack Developer</div>
+          </div>
+          <div class="cert-badge">✅ Certified</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">19 May 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">Code</span><span class="cert-row-value">10243040</span></div>
+          <div class="cert-row"><span class="cert-row-label">Skills</span><span class="cert-row-value">HTML · CSS · JS · Backend · DB</span></div>
+          <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
+        </div>
+      </div>
+
+      <!-- Claude 3.5 for Beginners -->
+      <div class="cert-card reveal">
+        <div class="cert-header purple">
+          <div>
+            <div class="cert-issuer">Thiranex · Skill Dev &amp; Future Tech</div>
+            <div class="cert-name">Claude 3.5 for Beginners</div>
+          </div>
+          <div class="cert-badge">✅ Certified</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Issued</span><span class="cert-row-value">3 May 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">Code</span><span class="cert-row-value">10181844</span></div>
+          <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">Generative AI · Claude API</span></div>
+          <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
+        </div>
+      </div>
+
+      <!-- Cisco HTML Essentials -->
+      <div class="cert-card reveal">
+        <div class="cert-header green">
+          <div>
+            <div class="cert-issuer">Cisco Networking Academy · MVGR</div>
+            <div class="cert-name">HTML Essentials</div>
+          </div>
+          <div class="cert-badge">✅ Certified</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Completed</span><span class="cert-row-value">27 Jan 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">Instructor</span><span class="cert-row-value">Sobha Rani K</span></div>
+          <div class="cert-row"><span class="cert-row-label">Issued by</span><span class="cert-row-value">MVGR + Cisco NetAcad</span></div>
+          <div class="cert-row"><span class="cert-row-label">Focus</span><span class="cert-row-value">HTML &amp; Web Basics</span></div>
+        </div>
+      </div>
+
+      <!-- Thiranex Internship Completion Certificate -->
+      <div class="cert-card reveal">
+        <div class="cert-header red">
+          <div>
+            <div class="cert-issuer">Thiranex · Certificate of Achievement</div>
+            <div class="cert-name">Full Stack Development Internship</div>
+          </div>
+          <div class="cert-badge">🏅 Verified</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-row"><span class="cert-row-label">Duration</span><span class="cert-row-value">22 May – 21 Jun 2026</span></div>
+          <div class="cert-row"><span class="cert-row-label">ID</span><span class="cert-row-value">THX-MAY2226-672</span></div>
+          <div class="cert-row"><span class="cert-row-label">Signed by</span><span class="cert-row-value">Hariharan M, CEO</span></div>
+          <div class="cert-row"><span class="cert-row-label">Status</span><span class="cert-row-value">Completed ✓</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <!-- ══ INTERNSHIPS ══ -->
